@@ -1,4 +1,5 @@
 (function () {
+  console.log("ngaFilter:加载成功");
   let { search } = location;
   let key = String("tid");
   const today = new Date().getTime();
@@ -11,7 +12,6 @@
           let name = arr[j].getAttribute("name");
           if (name == "regdate") {
             let curReg = new Date(`20${arr[j].innerHTML}`).getTime();
-            console.log(today - curReg);
             if (today - curReg < 7879680000) {
               outArr[i].style.display = "none";
             }
